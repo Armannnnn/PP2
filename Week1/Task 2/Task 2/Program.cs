@@ -4,43 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task_2
+namespace task2
 {
     class Student
     {
-        public string name;
-        public int ID;
-        public string yearofstudy;
+        public string name; // global name
+        public string id; // global id 
+        public int yearOfStudy; // global year
 
-        public Student(string name, int ID, string yearofstudy)
+        public Student(string name, string id, int yearOfStudy)
         {
-            this.name = name;
-            this.ID = ID;
-            this.yearofstudy = yearofstudy;
+            this.name = name; // we need to read our name as global
+            this.id = id; // we need to read our id as global
+            this.yearOfStudy = yearOfStudy; // we need to read our year as global
         }
 
-        public Student()
+        public Student() //inputing the data about student
         {
-            name = Console.ReadLine();
-            ID = Convert.ToInt32(Console.ReadLine());
-            yearofstudy = Console.ReadLine();
+            name = Console.ReadLine(); // read the input 
+            id = Console.ReadLine(); // read the input
+            yearOfStudy = Convert.ToInt32(Console.ReadLine()); // read the input and make integer
         }
 
-        public void PrintInfo()
+        public void PrintInfo() // output the data about student with increment yearofstudy
         {
-
-            Console.WriteLine(name);
-            Console.WriteLine(ID);
-            Console.WriteLine(yearofstudy);
+            Console.WriteLine(name); // print name
+            Console.WriteLine(id); // print id
+            Console.WriteLine(yearOfStudy+1); // print year
         }
     }
-
     class Program
     {
         static void Main(string[] args)
         {
-            Student x = new Student();
-            x.PrintInfo();
+            Student s = new Student(); // give student to s
+            s.PrintInfo(); // call function
+            Console.ReadKey(); // for not to close function
         }
     }
 }

@@ -41,8 +41,8 @@ namespace Task_1
 
             for (int i = 0; i < n; i++)
             {
-                int c = int.Parse(arr[i]);
-                if (Prime(c) == true)
+                int c = int.Parse(arr[i]); //converting elements of the array to integer
+                if (Prime(c) == true) // check whether number is prime or not
                 {
                     Console.WriteLine(c + " "); //display all prime numbers
                 }
